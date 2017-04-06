@@ -1,0 +1,10 @@
+
+prod:
+    host: "ftp.cluster021.hosting.ovh.net"
+    user: "vxlabccmwl"
+    pass: "PkbH2r4jPRXa"
+    path:
+        local: "/"
+        remote: "www"
+    exclude: ["dploy.yaml", ".gitignore"]
+

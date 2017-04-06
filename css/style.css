@@ -1,0 +1,333 @@
+:root {
+  --nav-height: 70px;
+  --vx-dark-color: #28272C;
+  --vx-gray-color: #C8C8C8;
+  --vx-light-color: #F9F9F7;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  font-weight: bold;
+  src: url('../fonts/Montserrat-Bold/Montserrat-Bold.eot');
+  src: local('Montserrat Bold'), url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold/Montserrat-Bold.svg#font') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-weight: normal;
+  src: url('../fonts/Montserrat-Regular/Montserrat-Regular.eot');
+  src: local('Montserrat Regular'), url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular/Montserrat-Regular.svg#font') format('svg');
+}
+
+body {
+  font-family: 'Montserrat Regular', sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  /*overflow: hidden;*/
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lab-video-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.video-background video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-background,
+.video-background video {
+  background: url(../img/poster.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+#lab video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-width: 100%;
+}
+
+#lab,
+#lab video {
+  background: url(../img/lab-background.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+.vxlogo {
+  float: left;
+}
+
+.navbar-fixed img {
+  height: 45px;
+  width: auto;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.navbar-fixed-top img {
+  height: 54px;
+  width: auto;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.navbar {
+  font-size: 15px;
+  z-index: 10;
+  width: 100%;
+  padding-top: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.navbar-fixed {
+  position: fixed;
+  background-color: var(--vx-dark-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+nav ul {
+  font-weight: 500;
+  margin-top: 23px;
+}
+
+.navbar-fixed ul {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+nav ul li {
+  display: block;
+  float: left;
+  width: auto;
+  list-style: none;
+}
+
+nav ul li a {
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-decoration: none;
+  color: var(--vx-light-color);
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li.active a {
+  text-decoration: none;
+  color: var(--vx-gray-color);
+}
+
+.home-label {
+  display: table-cell;
+  width: 1%;
+  height: 100vh;
+  padding: 170px 0 120px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.home-title {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 92px;
+  font-weight: bolder;
+  line-height: .9;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--vx-light-color);
+}
+
+.section-overlay {
+  display: table-cell;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 40vh;
+  left: 0;
+}
+
+.section-text {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 92px;
+  font-weight: bolder;
+  line-height: .8;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--vx-light-color);
+}
+
+.content {
+  position: relative;
+  background: var(--vx-light-color);
+}
+
+.embed-container {
+  position: relative;
+  /* overflow: hidden; */
+  max-width: 100%;
+  height: auto;
+  /* padding-bottom: 56.25%; */
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  /*position: absolute;
+    top: 0;
+    left: 0;*/
+  /*width: 100%;
+    height: 100%;*/
+}
+
+section {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: #fff !important;
+  position: relative;
+}
+
+.section-title {
+  font-size: 48px;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  position: relative;
+  top: 70px;
+  color: #fff;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  background-color: var(--vx-dark-color) !important;
+}
+
+footer .icone {
+  margin-left: 42px;
+  padding: 2px;
+}
+
+
+/*ceci est le code pour le compte a rebours*/
+
+#next {
+  background-color: var(--vx-dark-color) !important;
+}
+
+.compteur {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-weight: 100;
+  position: relative;
+  height: 639px;
+  text-align: center;
+  /*on doit changer le background */
+}
+
+#clockdiv {
+  font-family: sans-serif;
+  font-size: 90px;
+  font-weight: 100;
+  position: relative;
+  top: 200px;
+  display: inline-block;
+  color: #fff;
+}
+
+#clockdiv>div {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 3px;
+  background: transparent;
+}
+
+#clockdiv div>span {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.smalltext {
+  font-size: 21px;
+  padding-top: 5px;
+}
+
+.about-title {
+  color: var(--vx-dark-color);
+}
+
+.about-text {
+  color: var(--vx-dark-color);
+  font-size: 28px;
+  text-align: justify;
+  max-width: 1024px;
+  padding: 0 15px;
+  margin: 150px auto;
+}
+
+
+/*ceci est le code pour le slideshow*/
+
+
+/* Ce code doit etre toujours en bas
+========================== Media Queries ==================================*/
+
+@media (min-width: 768px) {
+  nav {
+    padding: 30px 0;
+  }
+  .navbar li {
+    margin-left: 30px;
+  }
+  .navbar-fixed-top {
+    padding: 30px 0;
+    background: none;
+    box-shadow: none;
+  }
+  .navbar-fixed {
+    padding-bottom: 10px;
+  }
+}
