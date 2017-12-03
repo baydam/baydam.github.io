@@ -8,49 +8,50 @@
   <title>VX Lab - Visual Xperiment Laboratory</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/jquery.fullpage.css">
 
 </head>
 
 <body>
   <div class="page">
-    <header>
-      <div class="video-background">
-        <video autoplay loop muted preload>
-          <source src="https://s3-eu-west-1.amazonaws.com/vxlab-website-videos/cover-video.mp4" type="video/mp4">
-          <source src="https://s3-eu-west-1.amazonaws.com/vxlab-website-videos/cover-video.webm" type="video/webm">
-        </video>
-      </div>
-      <nav id="navbar" class="navbar navbar-fixed-top">
-        <div class="container">
-          <div class="vxlogo">
-            <a href="http://www.vxlab.cc">
-              <img src="img/vx-logo.png" alt="VX Lab logo" width="200px" height "200px">
-            </a>
-          </div>
-
-          <ul class="navbar-right">
-            <li><a href="#" class="page-scroll">Accueil</a></li>
-            <li><a href="#about" class="page-scroll">À propos</a></li>
-            <li><a href="#works" class="page-scroll">Projets</a></li>
-            <li><a href="#next" class="page-scroll">À venir</a></li>
-            <li><a href="#lab" class="page-scroll">Laboratoire</a></li>
-            <li><a href="#contact" class="page-scroll">Contact</a></li>
-          </ul>
+    <nav id="navbar" class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="vxlogo">
+          <a href="http://www.vxlab.cc">
+          <img src="img/vx-logo.png" alt="VX Lab logo" width="200px" height "200px">
+        </a>
         </div>
-      </nav>
-      <div class="home-label">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <div class="home-title">
-                VISUAL XPERIMENT LABORATORY
+
+        <ul class="navbar-right">
+          <li><a href="#" class="page-scroll">Accueil</a></li>
+          <li><a href="#about" class="page-scroll">À propos</a></li>
+          <li><a href="#works" class="page-scroll">Projets</a></li>
+          <li><a href="#next" class="page-scroll">À venir</a></li>
+          <li><a href="#lab" class="page-scroll">Laboratoire</a></li>
+          <li><a href="#contact" class="page-scroll">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="fullpage">
+      <section class="section">
+        <div class="video-background">
+          <video data-autoplay loop muted preload buffered>
+          <source src="videos/cover-video.mp4" type="video/mp4">
+          <source src="videos/cover-video.webm" type="video/webm">
+        </video>
+        </div>
+        <div class="home-label">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <div class="home-title">
+                  VISUAL XPERIMENT LABORATORY
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <main class="content">
+      </section>
       <section id="about" class="section">
         <div class="container">
           <div class="about-title section-title">
@@ -68,18 +69,18 @@
       <section id="works" class="section">
         <div class="container">
           <div class="row">
-            <div class="col-xs-6 col-sm-6 embed-container">
-              <iframe src="https://player.vimeo.com/video/177538718?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="slide embed-container">
+              <iframe src="https://player.vimeo.com/video/220574119?color=F9F9F7&byline=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <div class="col-xs-6 col-sm-6 embed-container">
-              <iframe src="https://player.vimeo.com/video/177566371?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="slide embed-container">
+              <iframe src="https://player.vimeo.com/video/204199052?color=F9F9F7&byline=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <!-- <div class="col-xs-6 col-sm-6 embed-container">
-              <iframe src="https://player.vimeo.com/video/192593625?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="slide embed-container">
+              <iframe src="https://player.vimeo.com/video/177538718?color=F9F9F7&byline=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <div class="col-xs-6 col-sm-6 embed-container">
-              <iframe src="https://player.vimeo.com/video/166892218?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div> -->
+            <div class="slide embed-container">
+              <iframe src="https://player.vimeo.com/video/177545323?color=F9F9F7&byline=0" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -113,50 +114,70 @@
       <!-- next -->
       <section id="lab" class="section">
         <div class="lab-video-background">
-          <video autoplay loop muted preload>
-            <source src="https://s3-eu-west-1.amazonaws.com/vxlab-website-videos/lab-video.mp4" type="video/mp4">
-            <source src="https://s3-eu-west-1.amazonaws.com/vxlab-website-videos/lab-video.webm" type="video/webm">
-          </video>
-          <div class="section-overlay">
-            <div class="container">
-              <div class="row">
-                <div class="section-text">LABORATOIRE</div>
-              </div>
+          <video data-autoplay loop muted preload buffered>
+              <source src="videos/lab-video.mp4" type="video/mp4">
+              <source src="videos/lab-video.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="section-overlay">
+          <div class="container">
+            <div class="row">
+              <div class="section-text">LABORATOIRE</div>
             </div>
           </div>
         </div>
-
       </section>
-
-      <!-- lab -->
+      <!-- la<footer>
+      <a href="http://facebook.com/vxlab.cc/"> <img class="icone" src="img/icons/facebook-light.png" alt="facebook" width="40px" height="40px" /></a>
+      <a href="http://vimeo.com/vxlabcc"> <img class="icone" src="img/icons/vimeo-light.png" alt="vimeo" width="40px" height="40px" /></a>
+      <a href="http://instagram.com/vxlab.cc"> <img class="icone" src="img/icons/instagram-light.png" alt="instagram" width="40px" height="40px" /></a>
+      <a href="https://www.youtube.com/channel/UCvbRgQPdvPjSWYdic6Uwc5w"> <img class="icone" src="img/icons/youtube-light.png" alt="youtube" width="40px" height="40px" /></a>
+      <a href="https://twitter.com/vxlabcc"> <img class="icone" src="img/icons/twitter-light.png" alt="twitter" width="40px" height="40px" /></a>
+    </footer>b -->
       <section id="contact" class="section">
         <div class="container">
-
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
+        <div id="footer">
+          <div class="container">
+          <a href="http://facebook.com/vxlab.cc/"> <img class="icone" src="img/icons/facebook-light.png" alt="facebook" width="40px" height="40px" /></a>
+          <a href="http://vimeo.com/vxlabcc"> <img class="icone" src="img/icons/vimeo-light.png" alt="vimeo" width="40px" height="40px" /></a>
+          <a href="http://instagram.com/vxlab.cc"> <img class="icone" src="img/icons/instagram-light.png" alt="instagram" width="40px" height="40px" /></a>
+          <a href="https://www.youtube.com/channel/UCvbRgQPdvPjSWYdic6Uwc5w"> <img class="icone" src="img/icons/youtube-light.png" alt="youtube" width="40px" height="40px" /></a>
+          <a href="https://twitter.com/vxlabcc"> <img class="icone" src="img/icons/twitter-light.png" alt="twitter" width="40px" height="40px" /></a>
+          </div>
+        </div>
+        <!-- footer -->
       </section>
       <!-- contact -->
-    </main>
-    <!-- main-content -->
-
-
+    </div>
+    <!-- fullpage -->
   </div>
   <!-- page -->
-  <footer>
-    <a href="http://facebook.com/vxlab.cc/"> <img class="icone" src="img/icons/facebook-light.png" alt="facebook" width="40px" height="40px" /></a>
-    <a href="http://vimeo.com/vxlabcc"> <img class="icone" src="img/icons/vimeo-light.png" alt="vimeo" width="40px" height="40px" /></a>
-    <a href="http://instagram.com/vxlab.cc"> <img class="icone" src="img/icons/instagram-light.png" alt="instagram" width="40px" height="40px" /></a>
-    <a href="https://www.youtube.com/channel/UCvbRgQPdvPjSWYdic6Uwc5w"> <img class="icone" src="img/icons/youtube-light.png" alt="youtube" width="40px" height="40px" /></a>
-    <a href="https://twitter.com/vxlabcc"> <img class="icone" src="img/icons/twitter-light.png" alt="twitter" width="40px" height="40px" /></a>
 
 
-  </footer>
-
-  <script src="js/jquery.js" charset="utf-8"></script>
+  <!-- <script src="js/jquery.js" charset="utf-8"></script> -->
+  <!-- <script src="js/jquery.easing.min.js" charset="utf-8"></script> -->
+  <!-- <script src="js/countdown.js" charset="utf-8"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fullpage.js"></script>
   <script src="js/scrolling-nav.js" charset="utf-8"></script>
-  <script src="js/jquery.easing.min.js" charset="utf-8"></script>
-  <script src="js/countdown.js" charset="utf-8"></script>
-
-
+  <!-- <script src="js/jquery.easing.min.js" charset="utf-8"></script> -->
+  <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function()
+    {
+      $('#fullpage').fullpage(
+      {
+        scrollBar:true,
+        verticalCentered: true,
+        slidesNavigation: true
+      });
+      $(".embed-container").fitVids();
+    });
+  </script>
 </body>
 
 </html>
